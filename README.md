@@ -84,7 +84,6 @@ backend/
 
 ### 🖥️ Frontend
 
-```bash
 frontend/
 ├── index.html                   # Semantic HTML structure
 ├── styles.css                   # CSS using BEM methodology
