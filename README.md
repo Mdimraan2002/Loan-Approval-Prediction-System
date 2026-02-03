@@ -1,47 +1,94 @@
 # 🚀 Loan Approval Prediction System
 
-![Vite](https://img.shields.io/badge/Vite-5.x-purple?logo=vite)
-![React](https://img.shields.io/badge/React-18.x-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.x-teal?logo=tailwindcss)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-teal?logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A **modern, scalable web application** designed to predict loan approval status based on applicant information.  
-The project focuses on clean UI, modular architecture, and future-ready backend integration.
+A **full-stack machine learning web application** that predicts loan approval status based on applicant details.  
+The project follows **clean architecture**, **scalable backend design**, and **industry-standard ML practices**, making it suitable for **academic, portfolio, and FinTech prototype use**.
 
 ---
 
 ## 📌 Overview
 
-The **Loan Approval Prediction System** provides a user-friendly interface for collecting loan applicant details and is designed to integrate seamlessly with a machine learning backend. It serves as an academic, portfolio, and FinTech prototype project.
+The **Loan Approval Prediction System** collects applicant information via a responsive frontend, processes it through a FastAPI backend, and predicts loan approval using a trained machine learning model.
 
 ---
 
 ## ✨ Features
 
-- ⚡ Fast and optimized frontend using Vite
-- 🎨 Clean, responsive UI with Tailwind CSS
-- 🧩 Reusable components using shadcn/ui
-- 🧠 Ready for ML-based loan prediction integration
-- 🔌 API-ready architecture for Flask backend
-- 📱 Fully responsive design
+- ⚡ High-performance REST API using FastAPI
+- 🧠 ML-powered loan approval prediction
+- 📊 Data visualization using Chart.js
+- 🧩 Clean separation of frontend, backend, and ML layers
+- 📱 Responsive and user-friendly UI
+- 🔐 Input validation using Pydantic schemas
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Vite** – Lightning-fast development server
-- **React** – Component-based UI framework
-- **TypeScript** – Type-safe JavaScript
-- **Tailwind CSS** – Utility-first styling
-- **shadcn/ui** – Accessible UI components
 
-### Backend (Planned / Extendable)
-- **Flask (Python)** – REST API backend
-- **Scikit-learn** – Loan approval ML model
+| Technology | Version | Purpose |
+|---------|---------|--------|
+| HTML5 | Latest | Semantic markup |
+| CSS3 | Latest | Styling with variables & BEM methodology |
+| JavaScript | ES6+ | Event-driven interactivity |
+| Chart.js | 4.4.0 | Data visualization |
+| Inter Font | Latest | Professional typography |
+
+---
+
+### Backend
+
+| Technology | Version | Purpose |
+|---------|---------|--------|
+| Python | 3.8+ | Programming language |
+| FastAPI | 0.104.1 | REST API framework |
+| Uvicorn | 0.24.0 | ASGI server |
+| Pydantic | 2.4.2 | Data validation |
+
+---
+
+### Machine Learning
+
+| Technology | Version | Purpose |
+|---------|---------|--------|
+| Scikit-learn | 1.3.2 | ML framework |
+| Pandas | 2.1.3 | Data manipulation |
+| NumPy | 1.26.2 | Numerical computing |
+| Joblib | 1.3.2 | Model serialization |
 
 ---
 
 ## 📂 Project Structure
+
+### 🖥️ Backend
+
+```bash
+backend/
+├── main.py                      # FastAPI application entry point
+├── requirements.txt             # Python dependencies
+├── create_dataset.py            # Dataset generation script
+├── train_model.py               # Machine learning model training
+│
+├── app/
+│   ├── __init__.py               # Package initialization
+│   ├── routers/
+│   │   └── predictions.py        # Loan prediction API endpoints
+│   ├── schemas/
+│   │   └── schemas.py            # Request & response validation models
+│   └── services/
+│       └── prediction_service.py # ML inference and business logic
+
+### 🖥️ Frontend
+
+```bash
+frontend/
+├── index.html                   # Semantic HTML structure
+├── styles.css                   # CSS using BEM methodology
+└── script.js                    # Event driven JavaScript logic
+
+
 
