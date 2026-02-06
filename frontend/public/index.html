@@ -1,40 +1,455 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction System - AI-Powered Loan Approval</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="#0EA5E9"/>
+                    <path d="M16 8L8 12V20C8 23.3137 11.134 26 16 26C20.866 26 24 23.3137 24 20V12L16 8Z" fill="white"/>
+                </svg>
+                <span>LoanPredict</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#apply" class="nav-link">Apply Now</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <!-- App Title -->
-    <title>Loan Approval Prediction System</title>
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">AI-Powered Solution</span>
+                    <h1 class="hero-title">Smart Loan Prediction System</h1>
+                    <p class="hero-description">
+                        Get instant predictions on your loan application using advanced machine learning algorithms. 
+                        Fast, accurate, and completely automated.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#apply" class="btn btn-primary">Apply for Loan</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">97.5%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">&lt;1s</div>
+                            <div class="stat-label">Response Time</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">10K+</div>
+                            <div class="stat-label">Predictions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">📊</div>
+                        <div class="card-text">Real-time Analysis</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🤖</div>
+                        <div class="card-text">AI-Powered</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">✓</div>
+                        <div class="card-text">Instant Results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- SEO Meta -->
-    <meta
-      name="description"
-      content="A web-based Loan Approval Prediction System that predicts loan eligibility using a modern frontend and backend integration."
-    />
-    <meta name="author" content="Mohamed Imraan" />
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">About Our System</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">
+                    Our loan prediction system uses machine learning to analyze your application and provide instant feedback
+                </p>
+            </div>
 
-    <!-- Open Graph Meta -->
-    <meta property="og:title" content="Loan Approval Prediction System" />
-    <meta
-      property="og:description"
-      content="Predict loan approval status using a modern web application."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-image.png" />
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#E0F2FE"/>
+                            <path d="M24 14V34M34 24H14" stroke="#0EA5E9" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Fill Application</h3>
+                    <p>Provide your personal and financial information through our secure form</p>
+                </div>
 
-    <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Loan Approval Prediction System" />
-    <meta
-      name="twitter:description"
-      content="A modern loan approval prediction web application."
-    />
-    <meta name="twitter:image" content="/og-image.png" />
-  </head>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#E0F2FE"/>
+                            <circle cx="24" cy="24" r="8" fill="#0EA5E9"/>
+                        </svg>
+                    </div>
+                    <h3>AI Analysis</h3>
+                    <p>Our Logistic Regression model analyzes multiple factors instantly</p>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#E0F2FE"/>
+                            <path d="M16 24L22 30L32 18" stroke="#0EA5E9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Get Results</h3>
+                    <p>Receive your prediction with detailed probability analysis</p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h3>Technology Stack</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <span class="tech-name">Python</span>
+                        <span class="tech-role">Backend</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">FastAPI</span>
+                        <span class="tech-role">REST API</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Scikit-learn</span>
+                        <span class="tech-role">ML Framework</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Logistic Regression</span>
+                        <span class="tech-role">ML Model</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">JavaScript</span>
+                        <span class="tech-role">Frontend</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Chart.js</span>
+                        <span class="tech-role">Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="apply" class="apply-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Start Your Application</span>
+                <h2 class="section-title">Loan Application Form</h2>
+                <p class="section-description">
+                    Fill in your details to get an instant prediction on your loan application
+                </p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Profile</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Loan Details</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Results</div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Profile Form -->
+                <form id="profileForm" class="application-form active">
+                    <h3 class="form-title">Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input type="number" id="age" name="age" required min="18" max="100" placeholder="18">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employmentType">Employment Status *</label>
+                        <select id="employmentType" name="employmentType" required>
+                            <option value="">Select Employment Status</option>
+                            <option value="Employed">Employed</option>
+                            <option value="Self-Employed">Self-Employed</option>
+                            <option value="Unemployed">Unemployed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" onclick="nextStep(1)">
+                            Next Step
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Step 2: Loan Details Form -->
+                <form id="loanForm" class="application-form">
+                    <h3 class="form-title">Loan Application Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="applicantIncome">Applicant Income ($) *</label>
+                            <input type="number" id="applicantIncome" name="applicantIncome" required min="1" max="100000" placeholder="5000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="coapplicantIncome">Co-Applicant Income ($)</label>
+                            <input type="number" id="coapplicantIncome" name="coapplicantIncome" min="0" max="100000" value="0" placeholder="0">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="loanAmount">Loan Amount ($) *</label>
+                            <input type="number" id="loanAmount" name="loanAmount" required min="1" max="10000" placeholder="150">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loanTerm">Loan Term (Months) *</label>
+                            <select id="loanTerm" name="loanTerm" required>
+                                <option value="">Select Term</option>
+                                <option value="120">120 (10 years)</option>
+                                <option value="180">180 (15 years)</option>
+                                <option value="240">240 (20 years)</option>
+                                <option value="360" selected>360 (30 years)</option>
+                                <option value="480">480 (40 years)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="creditHistory">Credit History *</label>
+                            <select id="creditHistory" name="creditHistory" required>
+                                <option value="">Select Credit History</option>
+                                <option value="1">Good (Clear Credit History)</option>
+                                <option value="0">Poor (Defaults on Record)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dependents">Number of Dependents *</label>
+                            <select id="dependents" name="dependents" required>
+                                <option value="">Select Dependents</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3+">3+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="propertyArea">Property Area *</label>
+                            <select id="propertyArea" name="propertyArea" required>
+                                <option value="">Select Property Area</option>
+                                <option value="Urban">Urban</option>
+                                <option value="Semiurban">Semi-Urban</option>
+                                <option value="Rural">Rural</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="married">Marital Status *</label>
+                            <select id="married" name="married" required>
+                                <option value="">Select Status</option>
+                                <option value="Yes">Married</option>
+                                <option value="No">Single</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education">Education *</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select Education</option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="Not Graduate">Not Graduate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep(2)">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13 16L7 10L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="submitApplication()">
+                            Submit Application
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16 6L8 14L4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Step 3: Results -->
+                <div id="resultsSection" class="results-section">
+                    <div class="results-card" id="resultsCard">
+                        <!-- Results will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get in Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">
+                    Have questions? We're here to help you with your loan application
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h4>Email</h4>
+                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87f4f2f7f7e8f5f3c7ebe8e6e9f7f5e2e3eee4f3a9e4e8ea">[email&#160;protected]</a></p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h4>Location</h4>
+                        <p>San Francisco, CA 94102</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🕐</div>
+                        <h4>Business Hours</h4>
+                        <p>Mon - Fri: 9AM - 6PM</p>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Name *</label>
+                        <input type="text" id="contactName" name="name" required placeholder="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email *</label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <input type="text" id="contactSubject" name="subject" required placeholder="What is this regarding?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" name="message" required rows="5" placeholder="Your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#0EA5E9"/>
+                            <path d="M16 8L8 12V20C8 23.3137 11.134 26 16 26C20.866 26 24 23.3137 24 20V12L16 8Z" fill="white"/>
+                        </svg>
+                        <span>LoanPredict</span>
+                    </div>
+                    <p>AI-powered loan prediction system for instant, accurate loan approval predictions.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#apply">Apply</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Guide</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LoanPredict. All rights reserved. Built with Python, FastAPI, and Machine Learning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Analyzing your application...</p>
+    </div>
